@@ -60,7 +60,10 @@ public class Opg {
             } else {
                 j = k - 1;
             }
-
+            if (!Utils.operatorPrecedenceMatrixMap.containsKey(ch)) {
+                System.out.println("E");
+                break;
+            }
             int count = Utils.operatorMatrix(listStack[j], ch);
             //移进
             if (count == 2 || count == 3) {
